@@ -7,6 +7,10 @@ export default function Home() {
     console.log("Clicou");
   }
 
+  function handleParticipantRemove(name: string) {
+    console.log(`Você removeu o participante ${name}`);
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.eventName}>Nome do evento</Text>
@@ -22,9 +26,14 @@ export default function Home() {
         </TouchableOpacity>
       </View>
 
-      <Participant />
-      <Participant />
-      <Participant />
+      <Participant
+        name="Leonardo"
+        onRemove={() => handleParticipantRemove("Leonardo")}
+      />
+      <Participant name="Barbara" onRemove={() => handleParticipantRemove} />
+      <Participant name="Bill" onRemove={() => handleParticipantRemove} />
+      <Participant name="Gauss" onRemove={() => handleParticipantRemove} />
+      <Participant name="Luíza" onRemove={() => handleParticipantRemove} />
     </View>
   );
 }
