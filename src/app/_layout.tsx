@@ -1,5 +1,5 @@
 import Home from "@/screens/Home";
 
-export default function RootLayout() {
+export default function App() {
   return <Home />;
 }
